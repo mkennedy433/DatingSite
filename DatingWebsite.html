@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+ <h1>Please Enter Your Details For Our Dating Website!</h1>
+
+ <form method="post"
+       id="picform">
+
+    <fieldset>
+        <legend> Your Face</legend>
+        <label for="file"> Your Image:</label>
+        <input type="file" id="file" onchange="readURL(this);"/>
+<br>
+        <label for="blah">Image Preview:</label>
+        <img id="blah" src="#" alt="Your Image"/>
+
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend> Your General Details </legend>
+
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text" required>
+<br>
+        <label>Gender:</label>
+        <label for="female" class="width"> Female</label>
+        <input name="female" id="female" type="radio" required>
+
+        <label for="male" class="width"> Male </label>
+        <input name="male" id="male" type="radio" required>
+<br>
+        <label for="age"> Age:</label>
+        <input name="age" id="age" type="number" required>
+<br>
+        <label for="dob"> Date of Birth:</label>
+        <input name="dob" id="dob" type="date">
+<br>
+        <label for="favcolor"> Your Favorite Color:</label>
+        <input name="favcolor" id="favcolor" type="color">
+<br>
+        <label for="country"> Country:</label>
+        <select name="country" id="country">
+            <option value="UnitedStates">United States</option>
+            <option value="Canada"> Canada</option>
+            <option value="Mexico"> Mexico</option>
+            <option value="Scotland"> Scotland</option>
+            <option value="England"> England</option>
+            <option value="NoSelection"> No Selection</option>
+        </select>
+    </fieldset>
+
+     <fieldset>
+         <legend> Your Indicators</legend>
+
+         <label for="height"> Height: </label>
+        <h4> Short </h4>  <input name="height" id="height" type="range" min="0" max="100"> <h4>Tall</h4>
+<br>
+         <label for="salary" > Salary: </label>
+        <h4> Poor </h4> <input name="salary" id="salary" type="range" min="0" max="100"> <h4> Rich </h4>
+
+     </fieldset>
+
+     <fieldset>
+         <legend> Your Contact Information</legend>
+
+         <label for="email">Email:</label>
+         <input name="email" id="email" type="email" required>
+<br>
+         <label for="mobile">Mobile:</label>
+         <input name="mobile" id="mobile" type="tel">
+<br>
+         <label for="address">Address:</label>
+         <textarea name="address" id="address"> </textarea>
+<br>
+         <label class="width"> Method to Contact You:</label>
+         Email<input name="contact" id="contact1" type="checkbox" value="email">
+         Whatsapp <input name="contact" id="contact2" type="checkbox" value="whatsapp">
+         In-App Chat <input name="contact" id="contact3" type="checkbox" value="chat">
+
+     </fieldset>
+
+         <input type="submit">
+
+ </form>
+
+ <script type="text/javascript">
+     function readURL(input) {
+         if (input.files && input.files[0]) {
+             var reader = new FileReader();
+             reader.onload = function (e) {
+                 $('#blah')
+                         .attr('src', e.target.result)
+                         .width(150)
+                         .height(200);
+             };
+             reader.readAsDataURL(input.files[0]);
+         }
+     }
+ </script>
+
+
+</body>
+</html>

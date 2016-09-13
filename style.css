@@ -1,0 +1,24 @@
+fieldset { background: lightyellow;
+           border: 10px solid yellow;
+           margin-bottom: 10px;
+           width: 720px;  }
+
+label { display: inline-block;
+        text-align: right;
+        width:180px;
+        vertical-align:top;  }
+
+label.width { width:auto;}
+
+textarea { width:360px;
+           height:50px;}
+
+h4 { font-weight: normal;
+     display: inline;
+    background-color: yellow;  }
+
+label:hover { font-size: 25px; }
+
+input:hover { font-size: 15px;}
+
+article, aside, figure, footer, header, hgroup, menu, nav, section { display: block;}
